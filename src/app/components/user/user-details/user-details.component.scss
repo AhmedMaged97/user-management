@@ -1,0 +1,56 @@
+@import "../../../app.component.scss";
+
+.user-image{
+    width: 100%;
+    height: 100%;
+}
+
+.back-broser{
+    color: $greyColor;
+    &:hover{
+        cursor: pointer;
+        color: $lightRedColor;
+    }
+}
+.loading-icon{
+    color: $lightRedColor;
+    font-size: 150px;
+}
+.cards-icon{
+    color: $lightRedColor;
+    font-size: 18px;
+}
+h4{
+    color: $greenColor;
+    font-family: Serif;
+}
+.card-text{
+    font-size: 18px;
+    color: $greyColor;
+    font-family: Serif;
+}
+.card-id{
+    font-size: 18px;
+    color: $greyColor;
+    font-family: Serif;
+}
+.back-btn-mobile{
+    display: none;
+}
+@media only screen and (max-width: 425px){
+    .card-text{
+        font-size: 15px;
+    }
+    .cards-icon{
+        font-size: 16px;
+    }
+    
+}
+@media only screen and (max-width: 767px){
+    .back-btn-mobile{
+        display: inline-block;
+    }
+    .back-btn-screen{
+        display: none;
+    }
+}

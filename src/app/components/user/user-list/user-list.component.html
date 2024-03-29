@@ -1,0 +1,48 @@
+<div class="container user-list">
+    <div class="d-flex justify-content-center" *ngIf="spinner">
+        <i class="fa-solid fa-spinner fa-spin loading-icon"></i>
+    </div>
+
+    <div *ngIf="!spinner">
+        <div class="row gx-5 gy-4">
+            <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let user of userList; let i = index">
+                <div class="card pt-4" [routerLink]="['/user', user.id]">
+                    <div class="card-image d-flex justify-content-center">
+                        <div class="circle-card">
+                            <img src={{user.avatar}} class="card-img-top w-100 h-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <div>
+                            <h5 class="card-title"><span><i class="fa-regular fa-user me-1 cards-icon"></i></span> {{user.first_name}} {{user.last_name}}</h5>
+                            <p class="card-text"><span><i class="fa-regular fa-address-card me-2 cards-icon"></i></span> <span class="card-id">{{user.id}}</span></p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="mt-5 d-flex justify-content-between align-items-center" *ngIf="userSerchById ==0">
+            <div>
+                <p class="pagination-hint"><span>Total Pages: </span> <span> {{totalPages}}</span></p>
+            </div>
+            <div>
+                <nav aria-label="Page navigation example mt-4">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <button class="page-link"  [ngClass]="{disabled:currentPage === 1}"
+                        (click)="getUsersListByPage(currentPage-1)">Previous</button>
+                      </li>
+                      <li class="page-item ms-1" *ngFor="let e of generateNumberArray(totalPages)">
+                        <button class="page-link" [ngClass]="{isCurrent:currentPage === e}" (click)="getUsersListByPage(e)">
+                            {{e}}</button>
+                      </li>
+                      <li class="page-item ms-1">
+                        <button class="page-link" [ngClass]="{disabled : currentPage === totalPages}"
+                        (click)="getUsersListByPage(currentPage+1)">Next</button>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+</div>

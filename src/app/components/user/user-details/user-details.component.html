@@ -1,0 +1,30 @@
+<div class="container user-details d-flex justify-content-center">
+    <div class="d-flex justify-content-center" *ngIf="spinner">
+        <i class="fa-solid fa-spinner fa-spin loading-icon"></i>
+    </div>
+    <div *ngIf="!spinner" class="w-75">
+        <div class="back-btn-mobile mb-2">
+            <i class="fa-solid fa-angles-left fs-5 back-broser" (click)="getBack()"></i>
+        </div>
+        <div class="card " >
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="user-image" src={{userDetailsData.data.avatar}} alt="Suresh Dasari Card">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body d-flex justify-content-between">
+                        <div>
+                            <h4 class="card-title"><span><i class="fa-regular fa-user me-1 cards-icon"></i></span> {{userDetailsData.data.first_name}} {{userDetailsData.data.last_name}}</h4>
+                            <p class="card-text"><i class="fa-regular fa-envelope  me-1 cards-icon"></i> {{userDetailsData.data.email}}</p>
+                            <small class="card-id"><span><i class="fa-regular fa-address-card me-2 cards-icon"></i></span> {{userDetailsData.data.id}}</small>
+                        </div>
+                        <div class="back-btn-screen">
+                            <i class="fa-solid fa-angles-left fs-5 back-broser" (click)="getBack()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+

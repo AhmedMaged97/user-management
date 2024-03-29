@@ -1,0 +1,90 @@
+@import "../../../app.component.scss";
+
+.user-list{
+    max-width: 1032px;
+}
+.circle-card {
+    border: 2px dashed;
+    border-radius: 50%;
+    border-color: $lightRedColor;
+    height: 8vw;
+    width: 8vw;
+    max-height: 84px;
+    max-width: 84px;
+    background-color: $whiteColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.95vw;
+    transition-duration: 0.4s;
+    // transition-timing-function: ease-in-out;
+    img{
+        border-radius: 50%;
+    }
+   
+}
+// @keyframes spin-animation {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+.page-link{
+    color: $greenColor;
+    font-family: Serif;
+}
+.isCurrent{
+    background-color: $lightRedColor;
+    color: $whiteColor;
+    box-shadow: none ;
+}
+.card{
+    transition-duration: 0.3s ;
+    // transition-timing-function: ease-in-out !important;
+}
+
+.loading-icon{
+    color: $lightRedColor;
+    font-size: 150px;
+}
+h5{
+    color: $greenColor;
+    font-family: Sans-serif;
+}
+.cards-icon{
+    color: $lightRedColor;
+}
+.card-id{
+    color: $greyColor ;
+    font-weight: bold;
+    font-family: Serif;
+}
+.pagination-hint{
+    color: $greyColor;
+    font-size: 12px;
+    font-weight: 400px;
+}
+.card:hover{
+    cursor: pointer;
+    background: $lightRedColor;
+    
+    h5 , .cards-icon{
+        color: $whiteColor;
+    }
+    .card-id{
+        color: black;
+    }
+    .circle-card{
+        // animation: spin-animation 0.6s ease 1;
+        background-color: $lightRedColor;
+        border-color: $whiteColor;
+    }
+}
+@media only screen and (max-width: 768px){
+    .circle-card{
+        width: 25vw;
+        height: 25vw;
+    }
+}

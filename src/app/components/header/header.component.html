@@ -1,0 +1,30 @@
+<div class="mb-5  navbar-light nav-bg">
+    <nav class="navbar navbar-expand-lg container">
+        <div class="container-fluid">
+            <div class="d-flex justifu-content-center">
+                <img src="../../../assets/Logos/1713277.png" class="logo" alt="user Mange Logo">
+                <a class="navbar-brand ms-2" routerLink="/users"> User Management</a>
+            </div>
+          <div class="search-box">
+                <div>
+                    <input
+                    #txtSearch
+                    type="text"
+                    id="txtSearch"
+                    class="form-control form-control-flush ps-10"
+                    name="search"
+                    [(ngModel)]="inputValue"
+                    placeholder="Search..."
+                    (keyup)="searchUserById(txtSearch.value)" (change)="searchUserById(txtSearch.value)"
+                    autocomplete="off"
+                  />
+
+                </div>
+                <div class="search-icon ">
+                    <i class="fa fa-search text-muted me-2"></i>
+                </div>
+        </div>
+    
+        </div>
+      </nav>
+</div>
