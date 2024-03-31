@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { userDetailsModel } from 'src/app/models/userDetailsModel';
+import { UserDetailsModel } from 'src/app/models/userDetailsModel';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { Location } from '@angular/common';
 
@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 export class UserDetailsComponent implements OnInit{
 
   userId:number = 0;
-  userDetailsData:userDetailsModel= <userDetailsModel>{};
+  userDetailsData:UserDetailsModel= <UserDetailsModel>{};
 
   spinner:boolean = true;
 

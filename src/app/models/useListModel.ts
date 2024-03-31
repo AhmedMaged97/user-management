@@ -1,13 +1,13 @@
-export interface useListModel {
+export interface UserListModel {
     page:        number;
     per_page:    number;
     total:       number;
     total_pages: number;
-    data:        userList[];
+    data:        UserList[];
     support:     Support;
 }
 
-export interface userList {
+export interface UserList {
     id:         number;
     email:      string;
     first_name: string;

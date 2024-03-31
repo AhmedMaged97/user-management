@@ -9,7 +9,7 @@
                 <div class="card pt-4" [routerLink]="['/user', user.id]">
                     <div class="card-image d-flex justify-content-center">
                         <div class="circle-card">
-                            <img src={{user.avatar}} class="card-img-top w-100 h-100" alt="...">
+                            <img src={{user.avatar}} class="card-img-top w-100 h-100" [alt]="user.first_name">
                         </div>
                     </div>
                     <div class="card-body d-flex justify-content-center">

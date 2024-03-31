@@ -1,9 +1,9 @@
-export interface userDetailsModel {
-    data:    userData;
+export interface UserDetailsModel {
+    data:    UserData;
     support: Support;
 }
 
-export interface userData {
+export interface UserData {
     id:         number;
     email:      string;
     first_name: string;

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
-import { useListModel } from '../models/useListModel';
-import { userDetailsModel } from '../models/userDetailsModel';
+import { UserListModel } from '../models/useListModel';
+import { UserDetailsModel } from '../models/userDetailsModel';
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +26,11 @@ export class UserDataService {
   }
   constructor(private _HttpClient:HttpClient) { }
 
-  getUsersListData(page:number): Observable<useListModel>{
-    return this._HttpClient.get<useListModel>(`https://reqres.in/api/users?page=${page}`).pipe(catchError(this.handleError));
+  getUsersListData(page:number): Observable<UserListModel>{
+    return this._HttpClient.get<UserListModel>(`https://reqres.in/api/users?page=${page}`).pipe(catchError(this.handleError));
   }
-  getUsersDetailsData(userId:number): Observable<userDetailsModel>{
-    return this._HttpClient.get<userDetailsModel>(`https://reqres.in/api/users/${userId}`).pipe(catchError(this.handleError));
+  getUsersDetailsData(userId:number): Observable<UserDetailsModel>{
+    return this._HttpClient.get<UserDetailsModel>(`https://reqres.in/api/users/${userId}`).pipe(catchError(this.handleError));
   }
 
   changeNumber(searchId: number) {

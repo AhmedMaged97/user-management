@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { useListModel, userList } from 'src/app/models/useListModel';
+import { UserListModel, UserList } from 'src/app/models/useListModel';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
@@ -11,8 +11,8 @@ export class UserListComponent implements OnInit {
 
   totalPages:number = 0 ;
   currentPage:number = 0;
-  usersListData:useListModel = <useListModel>{}
-  userList : userList [] = [];
+  usersListData:UserListModel = <UserListModel>{}
+  userList : UserList [] = [];
   userSerchById : number = 0;
 
   spinner:boolean = true;
