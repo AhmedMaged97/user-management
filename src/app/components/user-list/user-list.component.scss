@@ -1,0 +1,35 @@
+@import "../../../app/app.component.scss";
+
+.user-list{
+    max-width: 1032px;
+}
+
+// @keyframes spin-animation {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+.page-link{
+    color: $greenColor;
+    font-family: Serif;
+}
+.isCurrent{
+    background-color: $lightRedColor;
+    color: $whiteColor;
+    box-shadow: none ;
+}
+
+
+.loading-icon{
+    color: $lightRedColor;
+    font-size: 150px;
+}
+
+.pagination-hint{
+    color: $greyColor;
+    font-size: 12px;
+    font-weight: 400px;
+}

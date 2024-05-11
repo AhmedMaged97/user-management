@@ -1,0 +1,13 @@
+<div class="card pt-4" [routerLink]="['/user', cardData.id]">
+    <div class="card-image d-flex justify-content-center">
+        <div class="circle-card">
+            <img src={{cardData.avatar}} class="card-img-top w-100 h-100" [alt]="cardData.first_name">
+        </div>
+    </div>
+    <div class="card-body d-flex justify-content-center">
+        <div>
+            <h5 class="card-title"><span><i class="fa-regular fa-user me-1 cards-icon"></i></span> {{cardData.first_name}} {{cardData.last_name}}</h5>
+            <p class="card-text"><span><i class="fa-regular fa-address-card me-2 cards-icon"></i></span> <span class="card-id">{{cardData.id}}</span></p>
+        </div>
+    </div>
+  </div>

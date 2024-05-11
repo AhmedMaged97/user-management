@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserListModel, UserList } from 'src/app/models/useListModel';
+import { UserList, UserListModel } from 'src/app/models/useListModel';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
@@ -8,7 +8,6 @@ import { UserDataService } from 'src/app/services/user-data.service';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
-
   totalPages:number = 0 ;
   currentPage:number = 0;
   usersListData:UserListModel = <UserListModel>{}
@@ -24,10 +23,11 @@ export class UserListComponent implements OnInit {
 
     this._UserDataService.userIdSearch.subscribe((idNumber)=>{
       this.userSerchById = idNumber;
-      (idNumber ==0 )?this.getUsersListByPage(1):this.getUserCardById(idNumber);
+      (idNumber === 0 )?this.getUsersListByPage(1):this.getUserCardById(idNumber);
     })
   }
 
+  //get User List From Api by Page Number
   getUsersListByPage(pageNum:number){
     this.spinner =true;
     this._UserDataService.getUsersListData(pageNum).subscribe({
@@ -50,6 +50,7 @@ export class UserListComponent implements OnInit {
     })
   };
 
+ //get User card From Api by Id
   getUserCardById(id:number){
     this.spinner = true;
     this.userList = [];

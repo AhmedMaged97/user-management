@@ -1,8 +1,5 @@
 @import "../../../app.component.scss";
 
-.user-list{
-    max-width: 1032px;
-}
 .circle-card {
     border: 2px dashed;
     border-radius: 50%;
@@ -23,31 +20,9 @@
     }
    
 }
-// @keyframes spin-animation {
-//     0% {
-//       transform: rotate(0deg);
-//     }
-//     100% {
-//       transform: rotate(360deg);
-//     }
-//   }
-.page-link{
-    color: $greenColor;
-    font-family: Serif;
-}
-.isCurrent{
-    background-color: $lightRedColor;
-    color: $whiteColor;
-    box-shadow: none ;
-}
 .card{
     transition-duration: 0.3s ;
     // transition-timing-function: ease-in-out !important;
-}
-
-.loading-icon{
-    color: $lightRedColor;
-    font-size: 150px;
 }
 h5{
     color: $greenColor;
@@ -60,11 +35,6 @@ h5{
     color: $greyColor ;
     font-weight: bold;
     font-family: Serif;
-}
-.pagination-hint{
-    color: $greyColor;
-    font-size: 12px;
-    font-weight: 400px;
 }
 .card:hover{
     cursor: pointer;

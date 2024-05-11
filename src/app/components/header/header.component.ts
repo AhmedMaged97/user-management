@@ -20,7 +20,7 @@ export class HeaderComponent {
   searchUserById(idValue:string){    
     let id = Number(idValue);
     if (isNaN(id)) {
-      alert("should search by Id");
+      alert("should search by Id Number");
       this.inputValue = "";
       this._UserDataService.changeNumber(0);
 
